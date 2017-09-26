@@ -3,7 +3,7 @@ package tree.binarytree;
 /**
  * Created by lei on 2017/9/26.
  */
-public class BinarySerach {
+public class BinarySearch {
 
     public static void search(int des, int[] arr, int begin, int end) {
 
