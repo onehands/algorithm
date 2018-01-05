@@ -28,6 +28,7 @@ public class Insert implements SortService {
                 for (j = i - 1; j >= 0 && arr[j] > tmp; j--) {
                     arr[j + 1] = arr[j];
                 }
+                //这里多移了一位
                 arr[j + 1] = tmp;
             }
             ArrayUtils.print("第" + (i) + "轮", arr);

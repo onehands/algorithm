@@ -12,12 +12,12 @@ public class Shell implements SortService {
             for (int i = h; i < arr.length; i++) {
                 if (arr[i] < arr[i - h]) {
                     int tmp = arr[i];
-                    int j = i;
-                    for (; j > h - 1 && arr[j - h] >= tmp; ) {
-                        arr[j] = arr[j - h];
+                    int j = i - h;
+                    for (; j >= 0 && arr[j] >= tmp; ) {
+                        arr[j + h] = arr[j];
                         j -= h;
                     }
-                    arr[j] = tmp;
+                    arr[j + h] = tmp;
                 }
             }
             ArrayUtils.print("", arr);
